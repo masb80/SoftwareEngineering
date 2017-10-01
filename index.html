@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+#content {
+
+}
+#content > div {
+    height:1000px;
+
+}
+#left {
+    float:left;
+    width: 50%;
+
+}
+#right {
+    float:right;
+    width: 50%;'
+
+}
+
+}
+</style>
+<script>
+
+    function addCand()
+
+    {
+       var list = document.getElementById('users');
+        var cname =document.getElementById('cname').value;
+        //var pname = document.getElementById('pname').value;
+        //var type = document.getElementById('type').value;
+        var entry = document.createElement('li');
+        entry.appendChild(document.createTextNode("Candidate Name: "+ cname )); //+ '\xa0  ' +"Party Name: "+ pname + "\xa0Type: " + type ));
+        list.appendChild(entry);
+        document.getElementById("cname").value = '';
+        //document.getElementById("pname").value = '';
+        //document.getElementById("type").value = '';
+        return false;
+
+    }
+
+</script>
+
+<head>
+  <title>Online Voting</title>
+</head>
+<body style="background-color:powderblue;">
+  <MARQUEE BGCOLOR=YELLOW behavior="scroll" direction="left" width="100%" height="30" scrollamount="5.5">	&nbsp;  Online Voting system </MARQUEE>
+  <MARQUEE  BGCOLOR=RED behavior="scroll" direction="right" width="100%" height="30" scrollamount="5.5">	&nbsp;  Group 2 </MARQUEE>
+  <div id="content">
+  <div id="left">
+
+  <div align="center">
+       <h2> Add Candidate </h2>
+       <form id="myform" onsubmit="return addCand()">
+          <table>
+            <tr>
+                 <br/>
+              <td align="right">Candiadate Name:</td>
+              <td align="left"><input type="text" name="cname" id="cname" placeholder="Candidate Name" /></td>
+            </tr>
+          <!--<tr>
+          <td align="right">Party Name:</td>
+          <td align="left"><input type="text" name="pname" id="pname" placeholder="Party Name"/></td>
+        </tr>
+
+
+            <td align="right">Election Types: </td></br>
+            <td align="left"><input type="text" name="type" id="type" placeholder=" Election Type" /></td>  -->
+     </table>
+                    <br/> <br/>
+        <button type = "submit" >Submit</button>
+
+    </form>
+  </div>
+    </div>
+    <div id="right">
+
+      <div align="center">
+      <h2>Candidate List:</h2>
+      <ul id="users" style="list-style-type:square" ></ul></div>
+    </div>
+    <div id="bottom"></div>
+</div>
+</body>
+
+</html>

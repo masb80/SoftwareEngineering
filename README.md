@@ -1,2 +1,2 @@
-# softwareEngineeringFall2017
+# SoftwareEngineeringFall2017
 OnlineVotingSystem

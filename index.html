@@ -1,81 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 <style>
 #content {
 }
-#content > div {
-    height:1000px;
+
+#content > Div {
+	height: 1000px;
 }
 #left {
-    float:left;
-    width: 50%;
+float:left;
+width:50%;	
 }
 #right {
-    float:right;
-    width: 50%;'
+float:right;
+width:50%;	
 }
 
-}
 </style>
 <script>
 
-    function addCand()
+$(document).ready(function(){
+  var persons = [];
+  function cname(name){
+    this.name = name;
+  }
+  function addAndAppendName(name){
+    var x = new cname(name);
+    persons.push(x);
+    saveNames();
+  }
+  function getPerson(index){
+    return persons[index];
+  }
+  getNames();
+  listPersons();
+  function listPersons(){
+    var list="";
 
-    {
-       var list = document.getElementById('users');
-        var cname =document.getElementById('cname').value;
-        //var pname = document.getElementById('pname').value;
-        //var type = document.getElementById('type').value;
-        var entry = document.createElement('li');
-        entry.appendChild(document.createTextNode("Candidate Name: "+ cname )); //+ '\xa0  ' +"Party Name: "+ pname + "\xa0Type: " + type ));
-        list.appendChild(entry);
-        document.getElementById("cname").value = '';
-        //document.getElementById("pname").value = '';
-        //document.getElementById("type").value = '';
-        return false;
+    for( var i in persons){
+      var pName = persons[i].name;
+      list += "<li>"+pName+"</li>";
     }
+    $("#users").html(list);
+  }
+
+        $("#addCand").click(function(){
+          var val = $("#cname").val();
+            addAndAppendName(val);
+            listPersons();
+        });
+
+    function saveNames()
+    {
+      localStorage.setItem("persons", JSON.stringify(persons));
+    }
+    function getNames(){
+      var pStr = localStorage.getItem("persons");
+      console.log(pStr);
+      persons = JSON.parse(pStr);
+      console.log(persons);
+      if(!persons){
+        persons = [];
+      }
+    }
+   });
+
+
+
+
+/*
+function addCand(){
+	var list = document.getElementById('users');
+	var cname = document.getElementById('cname').value;
+	var entry = document.createElement('li');
+	entry.appendChild(document.createTextNode("Candidate Name  :" + cname));
+	list.appendChild(entry);
+	document.getElementById("cname").value='';
+return false;	
+}
+
+*/
 
 </script>
+
 <head>
   <title>Online Voting</title>
 </head>
-<body style="background-color:powderblue;">
-  <MARQUEE BGCOLOR=YELLOW behavior="scroll" direction="left" width="100%" height="30" scrollamount="5.5">	&nbsp;  Online Voting system </MARQUEE>
-  <MARQUEE  BGCOLOR=RED behavior="scroll" direction="right" width="100%" height="30" scrollamount="5.5">	&nbsp;  Group 2 </MARQUEE>
-  <div id="content">
-  <div id="left">
-  <div align="center">
-       <h2> Add Candidate </h2>
-       <form id="myform" onsubmit="return addCand()">
-          <table>
-            <tr>
-                 <br/>
-              <td align="right">Candiadate Name:</td>
-              <td align="left"><input type="text" name="cname" id="cname" placeholder="Candidate Name" /></td>
-            </tr>
-          <!--<tr>
-          <td align="right">Party Name:</td>
-          <td align="left"><input type="text" name="pname" id="pname" placeholder="Party Name"/></td>
-        </tr>
+<body style="background-color:powderblue;"> 
+<marquee bgcolor="#99CC00" behavior="scroll" direction="left" width="100%" height="30" scrollamount="5.5"> &nbsp; Online Voting System </marquee>
+<marquee bgcolor="#FF0000" behavior="scroll" direction="right" width="100%" height="30" scrollamount="5.5"> &nbsp; Group 2 </marquee>
 
+<div id="content">
+<div id="left">
 
-            <td align="right">Election Types: </td></br>
-            <td align="left"><input type="text" name="type" id="type" placeholder=" Election Type" /></td>  -->
-     </table>
-                    <br/> <br/>
-        <button type = "submit" >Submit</button>
+<div align="center">
 
-    </form>
-  </div>
-    </div>
-    <div id="right">
+<h2> Add Candidate</h2>
+</br>
+<form id="my form" onSubmit="" >
+<table>
+<tr>
+<td align="right"> Candidate Name </td>
+<td align="left"> <input type="text" name="cname" id="cname" placeholder="Candidate Name" />
+</tr>
 
-      <div align="center">
-      <h2>Candidate List:</h2>
-      <ul id="users" style="list-style-type:square" ></ul></div>
-    </div>
-    <div id="bottom"></div>
-</div>
+</table>
+<br/> <br/>
+<button type="submit" id="addCand" > Submit </button>
+</form>
+</Div>
+</Div>
+<div id="content">
+<div id="right">
+<Div align="center">
+<h2> Candidates List</h2>
+<ul id="users" style="list-style-type:square" ></ul>
+</Div>
 </body>
 
 </html>

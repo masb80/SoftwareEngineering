@@ -1,0 +1,22 @@
+
+#fortop{
+background-color:black !important;
+margin: 0;
+}
+
+#left
+{float:left;
+width:50%;
+}
+
+#forul
+{
+
+  border-left:1px solid #d4d4d4;
+}
+
+ul{
+  list-style-type: none;
+
+  padding-left: 0;
+}

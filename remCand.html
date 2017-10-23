@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="redirection.js"></script>
+  <script src="main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="main.css" rel="stylesheet">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Online Voting System</h1>
+  </div>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Operations.html">Operations</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Election <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ><a href="One.html">Ongoing Election</a></li>
+          <li ><a href="coe.html">Completed Election</a></li>
+          <li><a href="upe.html">Upcoming Election</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Candidates <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Cand.html">Add Candidate</a></li>
+          <li class="active"><a href="remCand.html">Clear Candidate</a></li>
+        </ul>
+      </li>
+
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Election Manager</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="container">
+  <div class="jumbotron">
+  <form>
+  <div class="row">
+    <div class="col-sm-6">
+      <input autocomplete=off type="text" class="form-control" id="cname" placeholder="Enter Candidate Name">
+      <br/>
+      <button id="subcand" class="btn btn-primary" >Add Candidate</button>
+      <button id="remove"  class="btn btn-warning" > Clear </button>
+    </div>
+    <div class="col-sm-6" id="forul">
+      <h4>Candidate List</h4>
+
+      <ul id="candies">
+      </ul>
+    </div>
+
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+
+						<a href="mailto:#">Group 2</a><br>
+						<br>
+						Software Engineering Course, Department of Computer Science
+					</p>
+				</div>
+			</div>
+
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">Department </h3>
+				<div class="widget-body">
+                                <p><a href="http://www.mun.ca/computerscience/">Department of Computer Science</a><br>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</footer>
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017 Memorial University of Newfoundland.<br>
+					<a href="http://www.mun.ca/computerscience/" rel="designer">Newfoundland and Labrador, Canada.</a> </p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

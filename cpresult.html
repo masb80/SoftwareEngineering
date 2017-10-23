@@ -1,57 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="redirection.js"></script>
-  <script src="main.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="main.css" rel="stylesheet">
-
 <head>
-  <title>OVS</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div class="jumbotron" id="fortop" align="center">
-    <h2 style="color:white;">Welcome</h2>
+    <h1 style="color:white;">Online Voting System</h1>
   </div>
-<br/>
-<div class="container-fluid">
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Operations.html">Operations</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Election <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ><a href="One.html">Ongoing Election</a></li>
+          <li class="active"><a href="coe.html">Completed Election</a></li>
+          <li><a href="upe.html">Upcoming Election</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Candidates <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Cand.html">Add Candidate</a></li>
+          <li ><a href="remCand.html">Clear Candidate</a></li>
+        </ul>
+      </li>
 
-  <div class="row">
-    <div class="col-sm-4" ><div class="jumbotron" id="fortop" align="center">
-      <h2 style="color:white;"> Prototype </h2>
-      <h2 style="color:white;"> of </h2>
-      <h2 style="color:white;"> Online Voting System </h2>
-    </div></div>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Election Manager</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="col-sm-4" ><div class="jumbotron" id="fortop" align="center">
-      <h2 style="color:white;"> Created By </h2>
-      <h2 style="color:white;"> Group 2 </h2>
 
-    </div></div>
-
-    <div class="col-sm-4">
-
-      <form >
-        <div class="jumbotron" >
-      <div class="form-group" align="center" >
-        <input type="text" class="form-control" id="usr" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" id="pwd" placeholder="Password">
-      </div>
-      <button type="button" class="btn btn-primary" onclick="vop()">User</button> <label >: Login as Voter</label>  <br/> <br/>
-      <button type="button" class="btn btn-primary" onclick="operations()">EM</button> <label >: Login as Election Manager</label> <br/> <br/>
-      <button type="button" class="btn btn-danger">Cancel</button>
-      <div align="right">
-      <button type="button" class="btn btn-warning" >Not Registered yet</button>
+<div class="container">
+  <h2>Completed Presidential Elections</h2>
+  <div class="jumbotron">
+    <div class="alert alert-success">
+      <h3> <strong>Snow</strong> has won this election!! </h3>
     </div>
-    </div>
-    </form>
-  </div>
-  </div>
+</div>
 </div>
 
 <footer id="footer">

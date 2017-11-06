@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="redirection.js"></script>
+  <script src="main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="main.css" rel="stylesheet">
+<head>
+  <title>OVS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:black;">Online Voting System</h1>
+  </div>
+<nav>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+        <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html">Home</a></li>
+      <li><a href="Operations.html">Operations</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Election <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ><a href="One.html">Ongoing Election</a></li>
+          <li ><a href="coe.html">Completed Election</a></li>
+          <li><a href="upe.html">Upcoming Election</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Candidates <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Cand.html">Add Candidate</a></li>
+          <li ><a href="remCand.html">Clear Candidate</a></li>
+        </ul>
+      </li>
+
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+    
+            {{#if user}}
+              <li role="presentation"><a href="/">Voting System</a></li>
+              <li role="presentation"><a href="/users/logout">Logout</a></li>
+            {{else}}
+              <li role="presentation"><a href="/users/login">Login</a></li>
+              <li role="presentation"><a href="/users/register">Registration</a></li>
+            {{/if}}
+           
+    </ul>
+  </div>
+</nav>
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+        </div>        
+      </div>
+
+     
+</body>
+</html>

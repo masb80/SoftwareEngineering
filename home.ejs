@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%include ../partials/head %>
+
+<head>
+  <title>Party</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<%include ../partials/pnav %>
+
+<div class="jumbotron">
+<p>Welcome <%= parties[0].name %> , Please select the activity that you would like to do</p>
+</div>
+
+<div class="container">
+  <div class="well">Enrolled Candidates: <%= candidates.length %> </div>
+</div>
+<div class="container">
+  <div class="well"> <button type="submit" class ="btn btn-danger"></button> <-- Remove from party </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+
+  </div>
+
+  <div class="col-sm-6">
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+            <tr >
+              <% for(var i=0; i<candidates.length; i++) {%>
+                  <td><%= candidates[i].name %></a></td>
+                  <td><%= candidates[i].age %></td>
+                  <td><%= candidates[i].address %></td>
+                  <td>        <form  action="/party/candidates/<%= parties[0].name %>/<%= candidates[i]._id %>/delete/" method="post">
+                    <input type="hidden" name="party" >
+                    <button type="submit" class ="btn btn-danger"></button>
+
+                          </form>  </td>
+                </tr>
+                <% } %>
+
+        </tbody>
+      </table>
+
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

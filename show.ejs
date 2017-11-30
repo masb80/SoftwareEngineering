@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <%include ../partials/pnav %>
+  <h3><a href="#">Your Details</a></h3>
+<div class= "row">
+  <div class="col-sm-6" >
+
+  <table class="table">
+     <thead>
+       <tr>
+         <th>#</th>
+         <th>Current Information</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>Name </td>
+         <td><%= parties.name %></td>
+       </tr>
+       <tr class="success">
+         <td>Symbol</td>
+         <td> <%= parties.symbol %></td>
+       </tr>
+     </tbody>
+   </table></div>
+
+  <div class="col-sm-6" >
+    <h4> Update Information </h4>
+    <form action="/party/update/<%= parties._id %>" method="post">
+
+    <div class="form-group"  >
+        <input type="text" name="name" class="form-control" value="<%= parties.name %>"  placeholder="Name" >
+        <input type="text" name="symbol" class="form-control" value="<%= parties.symbol %>"  placeholder="Symbol" >
+      </div>
+      <button type="submit" class="btn btn-primary" name="button" > Update </button>
+      </form>
+   </div>
+
+</div>
+
+
+</body>
+</html>

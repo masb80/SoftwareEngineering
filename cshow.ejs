@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Candidate</h1>
+  </div>
+
+  <h3><a href="#">Candidate Details</a></h3>
+<div class= "row">
+  <div class="col-sm-6" >
+
+  <table class="table">
+     <thead>
+       <tr>
+         <th>#</th>
+         <th>Current Information</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>Name </td>
+         <td><%= candidates[0].name %></td>
+       </tr>
+       <tr class="success">
+         <td>Party</td>
+         <td> <%= candidates[0].party %></td>
+       </tr>
+       <tr class="danger">
+         <td>Address</td>
+         <td><%= candidates[0].address %></td>
+       </tr>
+       <tr class="info">
+         <td>Age </td>
+         <td><%= candidates[0].age %></td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+</div>
+<form action="/party/candidates/<%= parties[0].name%>/<%= candidates[0]._id%>/update/" method="post"> 
+
+<button type="submit" name="button" class="btn btn-danger"> Enroll Into Party</button>
+</form>
+
+
+</body>
+</html>

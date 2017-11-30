@@ -5,7 +5,7 @@
 </head>
 
 <body>
-  <%include ../partials/pnav %>
+  <%include ../partials/cnav %>
   <h3><a href="#">Your Details</a></h3>
 <div class= "row">
   <div class="col-sm-6" >
@@ -20,22 +20,32 @@
      <tbody>
        <tr>
          <td>Name </td>
-         <td><%= parties.name %></td>
+         <td><%= candidates.name %></td>
        </tr>
        <tr class="success">
-         <td>Symbol</td>
-         <td> <%= parties.symbol %></td>
+         <td>Party</td>
+         <td> <%= candidates.party %></td>
+       </tr>
+       <tr class="danger">
+         <td>Address</td>
+         <td><%= candidates.address %></td>
+       </tr>
+       <tr class="info">
+         <td>Age </td>
+         <td><%= candidates.age %></td>
        </tr>
      </tbody>
    </table></div>
 
   <div class="col-sm-6" >
     <h4> Update Information </h4>
-    <form action="/party/update/<%= parties._id %>" method="post">
+    <form action="/candidates/update/<%= candidates._id %>" method="post">
 
     <div class="form-group"  >
-        <input type="text" name="name" class="form-control" value="<%= parties.name %>"  placeholder="Name" >
-        <input type="text" name="symbol" class="form-control" value="<%= parties.symbol %>"  placeholder="Symbol" >
+        <input type="text" name="name" class="form-control" value="<%= candidates.name %>"  placeholder="name" >
+        <input type="hidden" name="party" class="form-control" value="<%= candidates.party %>"  placeholder="Party" >
+        <input type="text" name="address" class="form-control" value="<%= candidates.address %>"  placeholder="Address" >
+        <input type="number" min ="18" name="age" class="form-control" value="<%= candidates.age %>"  placeholder="Age" >
       </div>
       <button type="submit" class="btn btn-primary" name="button" > Update </button>
       </form>

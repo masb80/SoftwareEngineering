@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Party</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"> </div>
+    <div class="col-sm-8">
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr >
+          <% for(var i=0; i<parties.length; i++) {%>
+              <td><%= parties[i].name %></td>
+              <td><%= parties[i].symbol %></td>
+            </tr>
+            <% } %>
+
+    </tbody>
+  </table>
+  </div>
+  <div class="col-sm-2">
+
+  </div>
+
+  </div>
+</body>
+</html>

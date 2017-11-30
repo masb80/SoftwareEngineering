@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Voter</h1>
+    </div>
+<h2 align="middle" style="color:#ff0000"> Single Round </h2>
+
+
+<div class="row">
+  <div class="col-sm-2"> </div>
+  <div class="col-sm-8">
+
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Party</th>
+          <th>Age</th>
+          <th>Eid</th>
+          <th>Presidential Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          <tr >
+            <% for(var i=0; i<candidates.length; i++) {%>
+              <td><%= candidates[i].name %></td>
+                <td><%= candidates[i].party %></td>
+                <td><%= candidates[i].age %></td>
+                <td><%= candidates[i].pid %></td>
+                <td><%= candidates[i].pvote %></td>
+              </tr>
+              <% } %>
+
+      </tbody>
+    </table>
+</div>
+<div class="col-sm-2">
+
+</div>
+
+</div>
+
+
+<div class="container">
+  <div class="well"><a href="/voters/elections/">Click Me</a> For Election Home</div>
+</div>
+
+
+  </body>
+</html>

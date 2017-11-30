@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h2 style="color:white;"> Presidential Elections</h2>
+  </div>
+<br/>
+<h4><a href="/voters/elections/presidential/"> List Of Presidential Candidates</a></h4>
+
+<h4>Votes Per Candidate</h4>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Party</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+<% for(var i=0; i<candidates.length; i++) {%>
+      <tr >
+        <td><%= candidates[i].name %></td>
+        <td><%= candidates[i].party %></td>
+        <td><%= candidates[i].vote %></td>
+          </tr>
+          <% } %>
+
+
+  </tbody>
+</table>
+
+<a href ="/voters/elections/presidential/final"> <button type = "submit"> Result </button></a>
+
+
+
+
+
+</html>

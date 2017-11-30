@@ -5,7 +5,7 @@ Online Voting System
 Please read the wiki to see working stuff of iteration plan 2
 
 # Installation
-1. git clone git@github.com:masb80/softwareEngineering.git or https://github.com/ufshaik/OVS
+1. git clone https://github.com/masb80/softwareEngineering/tree/iteration2 or https://github.com/ufshaik/OVS
 2. npm install
 3. npm install bower -g 
 4. bower install bootstrap

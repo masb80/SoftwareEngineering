@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Election Manager</h1>
+    </div>
+<h2 align="middle" style="color:#ff0000"> Party Page </h2>
+<div class="container">
+  <div class="well">Click Edit to Edit Party Details which takes you to a new page</div>
+  <div class="well">Delete, deletes the Party on the same page and returns back</div>
+</div>
+<div class="container">
+  <h4><a href="/em/party">Go back </a></h4>
+  <h2>Party Detail</h2>
+<p>No. of Candidates in party "<%= parties.length%>"</p>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Party</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+<% for(var i=0; i<parties.length; i++) {%>
+        <tr >
+
+          <td><%= parties[i].party %></td>
+          <td><a href="/em/candidates/show/<%= parties[i]._id%>"><%= parties[i].name %></a></td>
+          <td><%= parties[i].age %></td>
+          <td><%= parties[i].address %></td>
+
+
+            </tr>
+<% } %>
+
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-sm-2">
+      <a href="/em/party/edit/<%= parties[0].party%>"><button type="button"  class="btn btn-primary">EDIT</button></a>
+    </div>
+    <div class="col-sm-8">
+
+    </div>
+    <div class="col-sm-2">
+      <form action="/em/party/delete/<%= parties[0].party%>" method="post">
+      <button type="submit" class="btn btn-danger">DELETE</button>
+      </form>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+</html>

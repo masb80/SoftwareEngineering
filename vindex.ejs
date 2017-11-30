@@ -9,9 +9,9 @@
     <div class="jumbotron" id="fortop" align="center">
       <h1 style="color:white;">Election Manager</h1>
     </div>
-<h2 align="middle" style="color:#ff0000"> Presidential </h2>
+<h2 align="middle" style="color:#ff0000"> Voter Page </h2>
 <div class="container">
-  <div class="well">Click on Eid for more details</div>
+  <div class="well">Click on Name to view Voter and get more details</div>
 </div>
 
 <div class="row">
@@ -22,18 +22,22 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Eid</th>
-      <th>Type</th>
-      <th>Status</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Age</th>
+      <th> Full Name </th>
     </tr>
   </thead>
   <tbody>
 
       <tr >
-        <% for(var i=0; i<elections.length; i++) {%>
-            <td><a href="/em/elections/presidential/ushow/<%= elections[i]._id%>"><%= elections[i].eid %></a></td>
-            <td><%= elections[i].type %></td>
-            <td><%= elections[i].status %></td>
+        <% for(var i=0; i<voters.length; i++) {%>
+            <td><a href="/em/voters/show/<%= voters[i]._id%>"><%= voters[i].username %></a></td>
+            <td><%= voters[i].email %></td>
+            <td><%= voters[i].password %></td>
+            <td><%= voters[i].age %></td>
+            <td><%= voters[i].firstname +" "+ voters[i].middlename +" "+ voters[i].lastname %></td>
           </tr>
           <% } %>
 

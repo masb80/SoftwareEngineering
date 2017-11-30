@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Election Manager</h1>
+    </div>
+<div class="row">
+  <div class="col-sm-2">
+    <h3><a href="/em/party/"> Party List</h3></a>
+  </div>
+  <div class="col-sm-6">
+    <h2 align="middle" style="color:#ff0000"> Party Page </h2>
+  </div>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-2">  </div>
+  <div class="col-sm-6">
+    <h1> Edit Candidates </h1>
+    <form action="/em/party/update/<%= parties[0]._id %>" method="post">
+
+        <input autocomplete=off type="text" name="name" class="form-control" value="<%= parties[0].name %>" placeholder="Name">
+        <input autocomplete=off type="text" name="symbol" class="form-control" value="<%= parties[0].symbol %>"  placeholder="Symbol">
+
+        <br/>
+        <button type="submit" class="btn btn-primary" >Edit</button>
+
+      </form>
+
+  </div>
+  <div class="col-sm-4">
+
+  </div>
+
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="jumbotron" id="fortop" align="center">
-      <h1 style="color:white;">Voter</h1>
+      <h1 style="color:white;">Election Manager</h1>
     </div>
 <h2 align="middle" style="color:#ff0000"> Presidential </h2>
 <div class="container">
@@ -26,17 +26,18 @@
           <th>Party</th>
           <th>Age</th>
           <th>Eid</th>
-
+          <th>Presidential Votes</th>
         </tr>
       </thead>
       <tbody>
 
           <tr >
             <% for(var i=0; i<candidates.length; i++) {%>
-              <td><a href="/voters/elections/presidential/cshow/<%=candidates[i]._id%>"> <%= candidates[i].name %></a></td>
+              <td><%= candidates[i].name %></td>
                 <td><%= candidates[i].party %></td>
                 <td><%= candidates[i].age %></td>
                 <td><%= candidates[i].pid %></td>
+                <td><%= candidates[i].pvote %></td>
               </tr>
               <% } %>
 
@@ -57,7 +58,7 @@
 
 
 <div class="container">
-  <div class="well"><a href="/voters/elections/">Click Me</a> For Election Home</div>
+  <div class="well"><a href="/em/home/5a10e055f8e87a2a28fb91e2">Click Me</a> For Admin Home</div>
 </div>
 
 

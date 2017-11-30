@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Election Manager</h1>
+    </div>
+<div class="row">
+  <div class="col-sm-2">
+    <h3><a href="/em/voters/"> voters List</h3></a>
+  </div>
+  <div class="col-sm-6">
+    <h2 align="middle" style="color:#ff0000"> Voter Page </h2>
+  </div>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-2">  </div>
+  <div class="col-sm-6">
+    <h1> Edit voters </h1>
+    <form action="/em/voters/update/<%= voters._id %>" method="post">
+
+        <input autocomplete=off type="text" name="username" class="form-control" value="<%= voters.username %>" placeholder="User Name">
+        <input autocomplete=off type="text" name="password" class="form-control" value="<%= voters.password %>"  placeholder="Password">
+        <input autocomplete=off type="text" name="email" class="form-control" value="<%= voters.email %>" placeholder="Email">
+        <input autocomplete=off type="text" name="age" class="form-control" value="<%= voters.age %>"  placeholder="Age">
+        <div class="row">
+          <div class="col-sm-4">
+            <input autocomplete=off type="text" name="firstname" class="form-control" value="<%= voters.firstname %>"  placeholder="First Name">
+
+          </div>
+          <div class="col-sm-4">
+            <input autocomplete=off type="text" name="middlename" class="form-control" value="<%= voters.middlename %>"  placeholder="Middel Name">
+
+
+          </div>
+          <div class="col-sm-4">
+            <input autocomplete=off type="text" name="lastname" class="form-control" value="<%= voters.lastname %>"  placeholder="Last Name">
+          </div>
+        </div>
+
+        <br/>
+        <button type="submit" class="btn btn-primary" >Edit</button>
+
+      </form>
+
+  </div>
+  <div class="col-sm-4">
+
+  </div>
+
+</div>
+</body>
+</html>

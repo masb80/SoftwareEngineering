@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="redirection.js"></script>
+  <script src="main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="main.css" rel="stylesheet">
+  
+  <head>
+    <title>OVS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h2 style="color:white;"></h2>
+    </div>
+    <br/>
+    
+    <div class="container-fluid">
+      
+      <div class="row">
+	<div class="col-sm-6" ><div class="jumbotron" id="fortop" align="center">
+	    <h2 style="color:black;"> Complete registration</h2>
+	    <h2 style="color:black;">  here for </h2>
+	    <h2 style="color:black;"> Online Voting  </h2> 
+	</div></div>	
+	
+	<div class="col-sm-6">	  
+   {{#if errors}}
+   {{#each errors}}
+   <div class="alert alert-danger">{{msg}}</div>
+   {{/each}}
+   {{/if}}
+   <form method="post" action="/users/register">
+     <div class="form-group">
+       <label>Name</label>
+       <input type="text" class="form-control" placeholder="Name" name="name">
+     </div>
+     <div class="form-group">
+    <label>Username</label>
+    <input type="text" class="form-control" placeholder="Username" name="username">
+     </div>
+     <div class="form-group">
+       <label>Email</label>
+       <input type="email" class="form-control" placeholder="Email" name="email">
+     </div>
+     <div class="form-group">
+       <label>Password</label>
+       <input type="password" class="form-control" placeholder="Password" name="password">
+     </div>
+     <div class="form-group">
+       <label>Confirm Password</label>
+       <input type="password" class="form-control" placeholder="Password" name="password2">
+     </div>
+     <button type="submit" class="btn btn-default">Submit</button>
+   </form>
+   
+	</div> 
+	
+  </div>
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+		<div class="row">
+		  <div class="col-md-3 widget">
+		    <h3 class="widget-title">Contact</h3>
+		    <div class="widget-body">
+		      
+		      <a href="mailto:#">Group 2</a><br>
+		      <br>
+		      Software Engineering Course, Department of Computer Science
+					</p>
+</div>
+</div>
+
+
+<div class="col-md-6 widget">
+  <h3 class="widget-title">Department </h3>
+  <div class="widget-body">
+    <p><a href="http://www.mun.ca/computerscience/">Department of Computer Science</a><br>
+      
+  </div>
+			</div>
+
+</div>
+</div>
+
+</footer>
+<footer id="underfooter">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6 widget">
+	<div class="widget-body">
+	</div>
+      </div>
+      
+      <div class="col-md-6 widget">
+				<div class="widget-body">
+				  <p class="text-right">
+				    Copyright &copy; 2017 Memorial University of Newfoundland.<br>
+				    <a href="http://www.mun.ca/computerscience/" rel="designer">Newfoundland and Labrador, Canada.</a> </p>
+				</div>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

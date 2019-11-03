@@ -1,3 +1,4 @@
+
 # OVS
 Online Voting System
 
@@ -15,3 +16,5 @@ PS: For linux user, install bower globally. Don't need to use nodemon. use "node
 
 # Start
 Once in please check localhost:3000/
+=======
+

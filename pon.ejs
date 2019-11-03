@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>eid</th>
+          <th>type</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          <tr >
+            <% for(var i=0; i<elections.length; i++) {%>
+              <td><a href="/elections/presidential/ongoing/show/<%=elections[i]._id%>"><%= elections[i].eid %></a></td>
+                <td><%= elections[i].type %></td>
+                <td><%= elections[i].status %></td>
+              </tr>
+              <% } %>
+
+      </tbody>
+    </table>
+
+  </body>
+</html>

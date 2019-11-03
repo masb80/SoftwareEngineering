@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Election Manager</h1>
+    </div>
+<div class="row">
+  <div class="col-sm-2">
+    <h3><a href="/em/candidates/"> Candidates List</h3></a>
+  </div>
+  <div class="col-sm-6">
+    <h2 align="middle" style="color:#ff0000"> Candidate Page </h2>
+  </div>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col-sm-2">  </div>
+  <div class="col-sm-6">
+    <h1> Edit Candidates </h1>
+    <form action="/em/candidates/update/<%= candidates._id %>" method="post">
+
+        <input autocomplete=off type="text" name="name" class="form-control" value="<%= candidates.name %>" placeholder="Name">
+        <input autocomplete=off type="text" name="address" class="form-control" value="<%= candidates.address %>"  placeholder="Address">
+        <input autocomplete=off type="text" name="party" class="form-control" value="<%= candidates.party %>" placeholder="Party">
+        <input autocomplete=off type="text" name="age" class="form-control" value="<%= candidates.age %>"  placeholder="Age">
+        <input autocomplete=off type="text" name="presidential" class="form-control" value="<%= candidates.presidential %>"  placeholder="Presidential">
+        <input autocomplete=off type="text" name="district" class="form-control" value="<%= candidates.district %>"  placeholder="District">
+        <input autocomplete=off type="text" name="pid" class="form-control" value="<%= candidates.pid %>"  placeholder="Pid">
+        <br/>
+        <button type="submit" class="btn btn-primary" >Edit</button>
+
+      </form>
+
+  </div>
+  <div class="col-sm-4">
+
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head%>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h2 style="color:white;"> Presidential Elections</h2>
+  </div>
+<br/>
+<div class="container">
+  <h4><a href="/voters/elections/presidential">Go back </a></h4>
+  <h2>Candidate Detail</h2>
+
+<div class="row">
+  <div class="col-sm-3"> </div>
+  <div class="col-sm-3">
+  <div class="img-div">
+  <img src="http://placekitten.com/g/400/200" />
+  </div>
+  </div>
+  <!--
+  <div class="col-sm-2">
+    <div class="img-div">
+    <img src="http://placekitten.com/g/400/200" />
+    </div>
+    <div class="col-sm-4">  </div>
+-->
+</div>
+
+
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Party</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr >
+          <td><%= candidates.name %></td>
+          <td><%= candidates.address %></td>
+          <td><%= candidates.party %></td>
+          <td><%= candidates.age %></td>
+
+            </tr>
+
+
+    </tbody>
+  </table>
+
+  <form action="/voters/elections/presidential/vote/<%= candidates._id%>" method="post">
+    <button type="submit" name="vote" class="btn btn-primary"<%= candidates.vote %>" >Vote</button>
+
+  </form>
+</div>
+
+</html>

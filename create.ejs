@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h2 style="color:white;">Candidates</h2>
+  </div>
+<br/>
+
+
+      <div class="container">
+      	<div class="row">
+              <div class="col-md-6">
+                  <form action="/candidates/save" method="post"  role="form">
+                  <fieldset><legend class="text-center">Valid information is required to register. <span class="req"><small> required *</small></span></legend>
+
+                  <div class="form-group">
+                  <label for="Name"><span class="req">* </span>  Name: </label>
+                          <input autocomplete=off type="text" name="name" class="form-control"  placeholder="name" required>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="Address"><span class="req">* </span> Address: </label>
+                            <input autocomplete=off type="text" name="address" class="form-control"  placeholder="Address" required>
+                          </div>
+
+                          <div class="form-group">
+
+                                  <input autocomplete=off type="hidden" name="party" class="form-control"  placeholder="party" >
+
+                          </div>
+
+                  <div class="form-group">
+                      <label for="Age"><span class="req">* </span> Age: </label>
+                          <input autocomplete=off type="number" min ="18" name="age" class="form-control"  placeholder="Age" required>
+
+                  </div>
+
+                  <div class="form-group">
+
+                    <input type="checkbox" required name="terms" >   <label for="terms">I agree with the <a href="#" title="You may read our terms and conditions by clicking on this link">terms and conditions</a> for Registration.</label><span class="req">* </span>
+                  </div>
+
+                  <div class="form-group">
+                      <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+                  </div>
+
+
+                  </fieldset>
+                  </form>
+
+
+              </div>
+
+                  <div class="col-md-6">
+                      <h1 class="page-header">Note: </h1>
+                      <p>On Successful Registration you will be sent back to the login page</p>
+
+                  </div>
+
+      	</div>
+      </div>
+</body>
+</html>

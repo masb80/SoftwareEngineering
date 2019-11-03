@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h1 style="color:white;">Request Box</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 align="center">Send approval for party</h2>
+
+      <form action="/candidates/request/create" method="post">
+        <input type="text" name="cname" placeholder="Your Name" class="form-control" value="<%=candidates.name%>">
+        <input type="text" name="pname" placeholder="Party Name" class="form-control">
+        <input type="text" name="content" placeholder="Message" class="form-control">
+        <br/>
+
+        <button type="submit" name="button" class="btn btn-warning"> Send</button>
+
+      </form>
+
+    </div>
+    <div class="col-sm-6">
+      <h2 align="center"> Election approval to party </h2>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

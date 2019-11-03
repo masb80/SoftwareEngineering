@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron" id="fortop" align="center">
+      <h1 style="color:white;">Election Manager</h1>
+    </div>
+<h2 align="middle" style="color:#ff0000"> Voter Page </h2>
+<div class="container">
+  <div class="well">Click on Name to view Voter and get more details</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2"> </div>
+  <div class="col-sm-8">
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Age</th>
+      <th> Full Name </th>
+    </tr>
+  </thead>
+  <tbody>
+
+      <tr >
+        <% for(var i=0; i<voters.length; i++) {%>
+            <td><a href="/em/voters/show/<%= voters[i]._id%>"><%= voters[i].username %></a></td>
+            <td><%= voters[i].email %></td>
+            <td><%= voters[i].password %></td>
+            <td><%= voters[i].age %></td>
+            <td><%= voters[i].firstname +" "+ voters[i].middlename +" "+ voters[i].lastname %></td>
+          </tr>
+          <% } %>
+
+  </tbody>
+</table>
+</div>
+<div class="col-sm-2">
+
+</div>
+
+</div>
+
+<div class="container">
+  <div class="well"><a href="/em/home/5a10e055f8e87a2a28fb91e2">Click Me</a> For Admin Home</div>
+</div>
+
+
+
+  </body>
+</html>

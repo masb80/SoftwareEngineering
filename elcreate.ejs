@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%include ../partials/head %>
+</head>
+
+<body>
+  <div class="jumbotron" id="fortop" align="center">
+    <h2 style="color:white;">Elections</h2>
+  </div>
+  <br/>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form action="/em/elections/create/save" method="post" role="form">
+
+          <div class="form-group">
+          <label for="E-id"><span class="req">* </span>   <a href="#" data-toggle="popover" title="District/Presidential" data-content="Some content inside the popover">Id</a>: </label>
+                  <input autocomplete=off type="number" name="eid" class="form-control"  placeholder="Id" required>
+          </div>
+
+          <div class="form-group">
+          <label for="Type"><span class="req">* </span>   <a href="#" data-toggle="popover" title="District/Presidential" data-content="Some content inside the popover">Type of Election</a>: </label>
+                  <input autocomplete=off type="text" name="type" class="form-control"  placeholder="Type" required>
+          </div>
+
+
+
+
+          <div class="form-group">
+              <label for="status"><span class="req">* </span> <a href="#" data-toggle="popover" title="Ongoing/Upcoming/Completed" data-content="Some content inside the popover">Status</a>: </label>
+                    <input autocomplete=off type="text" name="status" class="form-control"  placeholder="Status" required>
+                  </div>
+          <div class="form-group">
+            <input class="btn btn-success" type="submit" name="submit_reg" value="Create">
+          </div>
+        </form>
+    </div>
+  </div>
+</body>
+
+</html>
